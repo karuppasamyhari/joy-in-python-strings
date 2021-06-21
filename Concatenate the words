@@ -1,0 +1,26 @@
+#To get the input from the User
+
+s1=str(input("Enter your first string"))
+s2=str(input("Enter your second string"))
+
+#print those input strings and print the length of the first string
+
+print("The given strings is ", s1, s2)
+print("Length of the first string is", len(s1))
+
+
+n=(len(s1))//2
+
+#Split the first string into two halfs
+
+chunks=[s1[i:i+n] for i in range(0,len(s1),n)]
+print(chunks)
+
+
+#Check the string as odd parts or even parts
+#And print the string in concatenate  form
+
+if((len(chunks))%2==0):
+    print(chunks[0]+s2+chunks[1])
+else:
+    print(chunks[0]+s2+chunks[1]+chunks[2])
